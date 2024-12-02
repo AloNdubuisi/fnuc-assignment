@@ -1,49 +1,60 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;
     font-family: Arial, sans-serif;
-    margin: 200px;
+    min-height: 100vh;
     padding: 20px;
     background-color: #f4f4f9;
 }
 
 .container {
+    width: 100%;
     max-width: 600px;
-    margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
     background-color: #ffffff;
-    border-radius: 5px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     text-align: center;
+    font-size: 2rem;
     color: #333;
+    margin-bottom: 20px;
 }
 
 label {
     font-weight: bold;
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    font-size: 1rem;
 }
 
 input,
 button {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 button {
     background-color: #007bff;
     color: white;
     cursor: pointer;
-    font-size: 28px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
@@ -52,6 +63,44 @@ button:hover {
 
 #result {
     margin-top: 20px;
+    font-size: 1.2rem;
     font-weight: bold;
     color: #df0104;
+    text-align: center;
+}
+
+/* Responsive Design */
+
+/* Tablets */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    input,
+    button {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    #result {
+        font-size: 1.1rem;
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input,
+    button {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    #result {
+        font-size: 1rem;
+    }
 }
